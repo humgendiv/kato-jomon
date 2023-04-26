@@ -12,6 +12,8 @@
 
 # vcf.gzファイルのいらない行を削除していく。formatも整える。
 
+## !!!これで動くならそれに越したことはないが、うまくいかない場合はsplit_by_chromosome2.shを試すこと!!!
+
 DATADIR=/home/mkato952/data/clean_vcf/
 # DATADIRが存在しない場合は作成する
 if [ ! -d $DATADIR ]; then
