@@ -52,5 +52,5 @@ awk -F '\t' '{
     }
 }' | \
 # 5. 以上の処理を経たデータを、gz圧縮して、OUTPUTDIRディレクトリに保存する
-gzip > $OUTPUTDIR$FILENAME
+bgzip > $OUTPUTDIR$FILENAME
 
