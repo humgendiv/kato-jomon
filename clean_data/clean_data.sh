@@ -43,9 +43,11 @@ awk -F '\t' '{
                 break;
             }
         }
-        split($10, col10_arr, ":");
-        if (col10_arr[dp_index] >= 10) {
-            print
+        if (dp_index > 0) {
+            split($10, col10_arr, ":");
+            if (col10_arr[dp_index] >= 10) {
+                print
+            }
         }
     }
 }' | \
