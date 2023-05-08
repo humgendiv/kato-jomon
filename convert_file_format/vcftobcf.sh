@@ -2,9 +2,9 @@
 
 #$ -cwd
 #$ -V
-#$ -l short
-#$ -l d_rt=01:00:00
-#$ -l s_rt=01:00:00
+#$ -l medium
+#$ -l d_rt=02:00:00
+#$ -l s_rt=02:00:00
 #$ -l s_vmem=128G
 #$ -l mem_req=128G
 #$ -N convert_vcf_tobcf

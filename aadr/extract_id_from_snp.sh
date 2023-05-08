@@ -1,0 +1,1 @@
+cut -f1 /home/mkato952/data/AADR/v54.1.p1_1240K_public.snp > /home/mkato952/data/AADR/1240K.bim
