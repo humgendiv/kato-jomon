@@ -2,11 +2,11 @@
 
 #$ -cwd
 #$ -V
-#$ -l short
-#$ -l d_rt=01:00:00
-#$ -l s_rt=01:00:00
-#$ -l s_vmem=16G
-#$ -l mem_req=16G
+#$ -l medium
+#$ -l d_rt=03:00:00
+#$ -l s_rt=03:00:00
+#$ -l s_vmem=4G
+#$ -l mem_req=4G
 #$ -N clean_data
 #$ -S /bin/bash
 
@@ -23,12 +23,14 @@ if [ ! -d $OUTPUTDIR ]; then
     mkdir -p $OUTPUTDIR
 fi
 
-FILENAME=$1
+FILENAME="${1}.vcf.gz"
 
 # 1. gzファイルを展開し、パイプを繋いで１行ずつ処理する
 zcat $DATADIR$FILENAME | \
 # 2. 各行の先頭が"chr"で始まる行は、その先頭のchrを削除する
 awk '{if(substr($0,1,3)=="chr") print substr($0,4); else print $0}' | \
+# 2. 各行の先頭が"##contig=<ID=chr"で始まる行は、その先頭の##contig=<ID=chrを##contig=<ID=にする
+awk '{if(substr($0,1,16)=="##contig=<ID=chr") { sub("##contig=<ID=chr", "##contig=<ID=", $0); } print $0 }' | \
 # 3. 各行の先頭が"#"で始まる行は、4の処理を行わない。
 awk '{if(substr($0,1,1)!="#") print $0; else print $0}' | \
 # 4. 各行の10列目の文字列について、コロンを区切り文字としてDPに当たる文字列が10未満の数字の場合その行を削除する。
