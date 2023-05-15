@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #!ここを変える！
-bed_folder="bed_47p"
+bed_folder="aadr_east_ancient"
 
 folder_path="/home/mkato952/data/bed/${bed_folder}" # フォルダのパスを指定する
 for file in $(find "$folder_path" -type f -name "*.bim" -print); do
@@ -12,7 +12,7 @@ plink --merge-list output.txt --out "${folder_path}/J4_${bed_folder}"
 
 if test -e "${folder_path}/J4_${bed_folder}.missnp"; then
     while read line; do
-        plink --make-bed --exclude "${folder_path}/J4_${bed_folder}.missnp" --bfile $line --out "${line}.tmp"
+        plink --make-bed --exclude "${folder_path}/J4_${bed_folder}.missnp" --bfile $line --chr 1-22 --out "${line}.tmp"
     done < output.txt
 fi
 

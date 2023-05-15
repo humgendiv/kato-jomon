@@ -1,0 +1,5 @@
+genotypename:       /home/mkato952/data/EIG/J4_aadr_genomes_1000.geno
+snpname:    /home/mkato952/data/EIG/J4_aadr_genomes_1000.snp
+indivname:  /home/mkato952/data/EIG/J4_aadr_genomes_1000.ind
+evecoutname:        /home/mkato952/data/pca/J4_aadr_genomes_1000.evec.txt
+evaloutname:        /home/mkato952/data/pca/J4_aadr_genomes_1000.eval.txt

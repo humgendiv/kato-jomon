@@ -1,0 +1,8 @@
+genotypename: /home/mkato952/data/bed/aadr_genomes_1000/J4_aadr_genomes_1000.bed
+snpname: /home/mkato952/data/bed/aadr_genomes_1000/J4_aadr_genomes_1000.bim
+indivname: /home/mkato952/data/bed/aadr_genomes_1000/J4_aadr_genomes_1000.mod.fam
+outputformat: EIGENSTRAT
+genotypeoutname: /home/mkato952/data/EIG/J4_aadr_genomes_1000.geno
+snpoutname: /home/mkato952/data/EIG/J4_aadr_genomes_1000.snp
+indivoutname: /home/mkato952/data/EIG/J4_aadr_genomes_1000.ind
+pordercheck: NO
