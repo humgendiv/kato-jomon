@@ -12,6 +12,7 @@
 
 DATADIR=/home/mkato952/data/msmc/
 chr=$1
+sample=$2
 
 OUTDIR="${DATADIR}msmc_input"
 
@@ -22,5 +23,5 @@ sample_vcf="_chr${chr}.vcf.gz"
 ref_mask="/home/mkato952/data/reference/ref_masks/hs37d5_chr${chr}.mask.bed"
 
 /home/mkato952/msmc/msmc-tools/generate_multihetsep.py \
---mask="${DATADIR}I4${sample_mask}" --mask="${DATADIR}T5${sample_mask}" --mask="${DATADIR}FM020${sample_mask}" --mask=$ref_mask \
- "${DATADIR}I4${sample_vcf}" "${DATADIR}T5${sample_vcf}" "${DATADIR}FM020${sample_vcf}" > $OUTDIR/T5I4FM020.chr${chr}.multihetsep.txt
+--mask="${DATADIR}I4${sample_mask}"  --mask=$ref_mask \
+ "${DATADIR}${sample}${sample_vcf}" > $OUTDIR/${sample}.chr${chr}.multihetsep.txt
