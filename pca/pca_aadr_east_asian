@@ -3,3 +3,4 @@ snpname:    /home/mkato952/data/EIG/J4_aadr_east_asian.snp
 indivname:  /home/mkato952/data/EIG/J4_aadr_east_asian.ind
 evecoutname:        /home/mkato952/data/pca/J4_aadr_east_asian.evec.txt
 evaloutname:        /home/mkato952/data/pca/J4_aadr_east_asian.eval.txt
+numoutlieriter: 0

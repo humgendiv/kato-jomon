@@ -1,7 +1,7 @@
 #!/bin/bash
 
-#!ここを変える！
-bed_folder="aadr_east_ancient"
+#!ここを変える！(基本的にbedフォルダ内にすること)
+bed_folder="aadr_whole"
 
 folder_path="/home/mkato952/data/bed/${bed_folder}" # フォルダのパスを指定する
 for file in $(find "$folder_path" -type f -name "*.bim" -print); do

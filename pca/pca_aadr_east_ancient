@@ -3,3 +3,4 @@ snpname:    /home/mkato952/data/EIG/J4_aadr_east_ancient.snp
 indivname:  /home/mkato952/data/EIG/J4_aadr_east_ancient.ind
 evecoutname:        /home/mkato952/data/pca/J4_aadr_east_ancient.evec.txt
 evaloutname:        /home/mkato952/data/pca/J4_aadr_east_ancient.eval.txt
+numoutlieriter: 0
